@@ -1,4 +1,5 @@
 @import url(reset.css);
+@import url(desktop.css);
 
 body{
   background: pink;
@@ -7,20 +8,35 @@ body{
 #wrapper{
   background: skyblue;
   height: 100vh;
+  position: relative;
 }
 
-#container{
-  background: pink;
-}
 
 #birthdayMs{
-  height: 100%;
+  position: absolute;
+  top: 30%;
+  transform: translate(0 ,-50%);
+}
+
+.flag{
+  width: 50%;
+}
+
+
+#cake{
+  width: 90%;
+  position: absolute;
+  bottom: 3%;
+  right: 50%;
+  transform: translate(50% ,0%);
 }
 
 footer{
   position: fixed;
   bottom: 0;
   width: 100%;
+  font-size: 2.5em;
+  text-align: center;
 }
 
 .clear{
@@ -28,9 +44,10 @@ footer{
 }
 
 .right{
-  float: right
+  float: right;
 }
 
 .left{
   float: left;
+  transform: scale(-1, 1);
 }
