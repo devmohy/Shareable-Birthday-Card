@@ -11,11 +11,16 @@ body{
   position: relative;
 }
 
-
+#date{
+  position: absolute;
+  font-size: 5em;
+  top: 18%;
+  right: 50%;
+  transform: translate(50% ,0%);
+}
 #birthdayMs{
   position: absolute;
-  top: 30%;
-  width: 100px;
+  top: 10%;
   transform: translate(0 ,-50%);
 }
 
