@@ -1,14 +1,24 @@
 @import url(reset.css);
 @import url(desktop.css);
 
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@keyframes horizontal {
+  0% { -webkit-transform:translateY(  -50px); }
+  100% { -webkit-transform:translateY(  0px); }
+}
+
 body{
-  background: pink;
+  background: linear-gradient(#FFAD90
+  , #FFF8DC );
 }
 
 #wrapper{
-  background: skyblue;
   height: 100vh;
   position: relative;
+  animation: fadeIn 8s ease 0s 1 normal;
 }
 
 #date{
@@ -17,7 +27,9 @@ body{
   top: 18%;
   right: 50%;
   transform: translate(50% ,0%);
+  font-family: 'Black Han Sans', sans-serif;
 }
+
 #birthdayMs{
   position: absolute;
   top: 10%;
@@ -36,13 +48,29 @@ body{
   right: 50%;
   transform: translate(50% ,0%);
 }
+.eaten{
+  width: 300px;
+  height: 300px;
+  top: 70%;
+  z-index: 100;
+  position: absolute;
+}
+#balloon{
+  width: 20%;
+  position: absolute;
+  bottom: 30%;
+  left: 5%;
+  z-index: -1;
+  animation: horizontal 1s ease-in-out infinite alternate;
+}
 
 footer{
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   font-size: 2.5em;
   text-align: center;
+  font-family: sans-serif;
 }
 
 .clear{

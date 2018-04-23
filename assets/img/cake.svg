@@ -29,6 +29,44 @@
 	.st23{fill:#5FC0CE;}
 	.st24{fill:#F7921E;}
 	.st25{fill:#FFD100;}
+
+
+	<!-- custom style -->
+	#right{
+		transform-origin: 160px 70px;
+		transform:rotate(40deg);
+		animation: fire 5s ease-in-out infinite;
+	}
+	#right_x5F_2{
+		transform-origin: 135px 35px;
+		transform:rotate(40deg);
+		animation: fire 7s ease-in-out infinite;
+	}
+	#left{
+		transform-origin: 15px 70px;
+		transform:rotate(30deg);
+		animation: fire 3s ease-in-out infinite;
+	}
+	#left_x5F_2{
+		transform-origin: 45px 35px;
+		transform:rotate(40deg);
+		animation: fire 6s ease-in-out infinite;
+	}
+
+	#center{
+		transform-origin: 90px 25px;
+		transform:rotate(40deg);
+		animation: fire 4s ease-in-out infinite;
+	}
+
+	<!-- keyframe -->
+	@keyframes fire {
+	    0% {transform:rotate(0deg)}
+	    25% {transform:rotate(20deg)}
+	    50% {transform:rotate(0deg)}
+	    75% {transform:rotate(-20deg)}
+	    100% {transform:rotate(0deg)}
+	}
 </style>
 <g id="Layer_1">
 	<g id="cake">
