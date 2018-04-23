@@ -1,5 +1,4 @@
 @import url(reset.css);
-@import url(desktop.css);
 
 @keyframes fadeIn {
     0% {opacity: 0}
@@ -32,8 +31,9 @@ body{
 
 #birthdayMs{
   position: absolute;
-  top: 10%;
-  transform: translate(0 ,-50%);
+  top: 5%;
+  transform: translate(50%, 0%);
+  right: 50%;
 }
 
 .flag{
@@ -48,13 +48,7 @@ body{
   right: 50%;
   transform: translate(50% ,0%);
 }
-.eaten{
-  width: 300px;
-  height: 300px;
-  top: 70%;
-  z-index: 100;
-  position: absolute;
-}
+
 #balloon{
   width: 20%;
   position: absolute;

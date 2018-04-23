@@ -1,0 +1,29 @@
+@media screen and (min-width: 1020px) {
+  #date{
+    font-size: 2em;
+    top: 25%;
+  }
+
+  #birthdayMs{
+    top: 8%;
+    height: 15%;
+  }
+
+  .flag{
+    width: 30%;
+  }
+
+
+  #cake{
+    height: 50%;
+  }
+
+  #balloon{
+    height: 40%;
+  }
+
+  footer{
+    font-size: 1em;
+  }
+
+}
