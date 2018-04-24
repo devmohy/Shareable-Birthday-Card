@@ -9,6 +9,8 @@
   100% { -webkit-transform:translateY(  0px); }
 }
 
+
+
 body{
   background: linear-gradient(#FFAD90
   , #FFF8DC );
@@ -17,9 +19,55 @@ body{
 #wrapper{
   height: 100vh;
   position: relative;
-  animation: fadeIn 8s ease 0s 1 normal;
+/*   animation: fadeIn 8s ease 0s 1 normal; */
 }
 
+#cover{
+  height: 100%;
+  width: 100%;
+  background:#FFF8DC;
+  position: absolute;
+  z-index: 5;
+  transition: all 5s;
+}
+
+#btn{
+  width:500px;
+  height:200px;
+  background:skyblue;
+  border-radius:50%;
+  margin: auto;
+  display: flex;
+  justify-content: center; /*左右中央揃え*/
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.9;
+  box-shadow: 0 10px 0 #0B3861;
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -50%);
+  right: 50%;
+}
+
+.balloones{
+  width: 8%;
+  position: absolute;
+  bottom: 0%;
+  right: 5%;
+  z-index: 1;
+  opacity: 0;
+}
+
+#btn:hover{
+  opacity: 1;
+}
+
+#btn:active{
+  margin-top:36px;
+  box-shadow: 0 0 0;
+}
 #date{
   position: absolute;
   font-size: 5em;
@@ -52,10 +100,31 @@ body{
 #balloon{
   width: 20%;
   position: absolute;
-  bottom: 30%;
-  left: 5%;
+  top: 30%;
+  left: 10%;
   z-index: -1;
   animation: horizontal 1s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+.position_random{
+  bottom: 30%;
+  right: 30%;
+}
+
+.position_ramdom_2{
+  bottom: 20%;
+  left: 10%;
+}
+
+.position_ramdom_3{
+  bottom: 10%;
+  left: 20%;
+}
+
+.position_ramdom_4{
+  bottom: 10%;
+  left: 40%;
 }
 
 footer{
