@@ -10,8 +10,9 @@ window.onload = function(){
     $(this).animate({top: '-50%'}, {duration: 2000});
   });
   $("#btn").click(function(){
+    $(this).fadeOut(1000);
     setTimeout(function(){
-        $("#cover").fadeOut(3000);
+        $("#btn").parent("#cover").hide();
     },1000);
   });
 }
