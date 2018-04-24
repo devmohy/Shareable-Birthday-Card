@@ -10,13 +10,8 @@ window.onload = function(){
     $(this).animate({top: '-50%'}, {duration: 2000});
   });
   $("#btn").click(function(){
-    $(this).siblings(".balloones")
-    .animate({
-    'top':'-35%',
-    'opacity':'1'
-    },5000)
     setTimeout(function(){
-        $("#cover").animate({opacity:'0'},1000);
-    },3000);
+        $("#cover").fadeOut(3000);
+    },1000);
   });
 }
