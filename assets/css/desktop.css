@@ -1,4 +1,5 @@
 @media screen and (min-width: 1020px) {
+
   #date{
     font-size: 2em;
     top: 25%;
@@ -13,6 +14,9 @@
     width: 30%;
   }
 
+  #date{
+    font-size: 5em;
+  }
 
   #cake{
     height: 50%;
@@ -20,6 +24,12 @@
 
   #balloon{
     height: 40%;
+  }
+
+  .note{
+    width: 5%;
+    min-width: 120px;
+    right: 15%;
   }
 
   footer{
