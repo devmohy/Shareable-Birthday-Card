@@ -17,46 +17,41 @@ window.onload = function(){
     },1000);
   });
 
-// ajax to get itunes music
-     var params = {
-        lang: 'ja_jp',
-        entry: 'music',
-        media: 'music',
-        country: 'JP',
-        term: keyWord,
-        limit: maxNum,
+    $(".note").click(function(){
 
-      };
-
-var keyWord = "sample",
-    maxNum = "sample2"
-
-    $(".note").click(function(keyWord, maxNum){
-
-      var msg="birthday"; //検索ワード
+      var msg="birthday song"; //検索ワード
       var params = {
-      term: msg,
-      limit: 30, //データ数の上限
-      lang: "ja_jp",
-      entry: "music",
-      media: "music",
-      country: "US",
+      "term": msg,
+      "limit": 100, //データ数の上限
+      "entry": "music",
+      "media": "music",
+      "country":"US",
+      "primaryGenreName": "Pop",
       };
 
       $.ajax({
-        url: "https:itunes.apple.com/search",
-        method: "GET",
-        data: params,
-        dataType: "jsonp",
+        "url": "https:itunes.apple.com/search",
+        "method": "GET",
+        "data": params,
+        "dataType": "jsonp",
 
       success: function(json){
         console.log(json);
-        srcUrl = new Array(json.results.length);
+        // var srcUrl = new Array(json.results.length);
         // srcTitle = new Array(json.results.length);
         // srcArt = new Array(json.results.length);
         // srcArtist = new Array(json.results.length);
-        console.log(json.results[0].previewUrl);
 
+        var random = Math.floor( Math.random() * 100 );
+        console.log(random);
+        var mucic =  json.results[random].previewUrl,
+            title =  json.results[random].trackName,
+            art = json.results[random].artworkUrl100,
+            src = json.results[random].artistName;
+        $('#itMic').attr("src", mucic);
+        console.log(mucic);
+        console.log(art);
+        console.log(src);
         // for (var i=0;i<json.results.length;i++) {
         //   // srcUrl[i] = json.results[i].previewUrl; //preview
         //   // srcTitle[i] = json.results[i].trackName; //SNG name

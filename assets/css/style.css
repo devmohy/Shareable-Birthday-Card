@@ -84,6 +84,13 @@ body{
   font-family: 'Black Han Sans', sans-serif;
 }
 
+
+#itMic{
+  background: red;
+  width: 1000px;
+}
+
+
 #birthdayMs{
   position: absolute;
   top: 5%;
