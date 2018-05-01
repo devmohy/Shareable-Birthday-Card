@@ -30,7 +30,7 @@ window.onload = function(){
       };
 
       $.ajax({
-        "url": "https:itunes.apple.com/search",
+        "url": "https://itunes.apple.com/search",
         "method": "GET",
         "data": params,
         "dataType": "jsonp",
@@ -43,15 +43,15 @@ window.onload = function(){
         // srcArtist = new Array(json.results.length);
 
         var random = Math.floor( Math.random() * 100 );
-        console.log(random);
+        // console.log(random);
         var mucic =  json.results[random].previewUrl,
             title =  json.results[random].trackName,
             art = json.results[random].artworkUrl100,
             src = json.results[random].artistName;
         $('#itMic').attr("src", mucic);
-        console.log(mucic);
-        console.log(art);
-        console.log(src);
+        // console.log(mucic);
+        // console.log(art);
+        // console.log(src);
         // for (var i=0;i<json.results.length;i++) {
         //   // srcUrl[i] = json.results[i].previewUrl; //preview
         //   // srcTitle[i] = json.results[i].trackName; //SNG name
