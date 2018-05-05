@@ -48,7 +48,10 @@ window.onload = function(){
             title =  json.results[random].trackName,
             art = json.results[random].artworkUrl100,
             src = json.results[random].artistName;
+        $('#art').attr("src", art);
+        $('#title').html(title);
         $('#itMic').attr("src", mucic);
+        $('#music').show();
         // console.log(mucic);
         // console.log(art);
         // console.log(src);

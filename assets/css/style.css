@@ -11,11 +11,6 @@
     100% { transform:translateY(  0px); }
 }
 
-@keyframes rotate {
-    0% { transform:rotate(0deg); }
-    50% { transform:rotate(-50deg); }
-    100% { transform:rotate(0deg); }
-}
 
 body{
   background: linear-gradient(#FFAD90
@@ -26,6 +21,7 @@ body{
   height: 100vh;
   position: relative;
 }
+
 
 #cover{
   height: 100%;
@@ -84,11 +80,38 @@ body{
   font-family: 'Black Han Sans', sans-serif;
 }
 
+/*  */
+#music{
+  position: absolute;
+  width: 20%;
+  background: white;
+  right: 10%;
+  top: 45%;
+  z-index: 1;
+  text-align: center;
+  border-radius: 100%;
+  padding: 5em;
+  display: none;
+  opacity: 0.9;
+  box-shadow: 0 10px 0 #0B3861;
+}
+
+#art{
+  height: 100%;
+  width: 100%;
+}
+
+#title{
+  font-size: 1em;
+  width: 100%;
+  font-family: 'Black Han Sans', sans-serif;
+  margin: 1em 0;
+}
 
 #itMic{
-  background: red;
-  width: 1000px;
+  width: 50%;
 }
+/*  */
 
 
 #birthdayMs{
@@ -126,7 +149,6 @@ body{
   width: 15%;
   top: 30%;
   right: 10%;
-  animation: rotate 1s ease-in-out infinite alternate;
 }
 
 .position_random{

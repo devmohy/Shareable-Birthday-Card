@@ -15,11 +15,26 @@
   }
 
   #date{
-    font-size: 5em;
+    font-size: 3em;
   }
 
   #cake{
     height: 50%;
+  }
+
+  #music{
+    width: 7%;
+    right: 18%;
+  }
+
+  #art{
+  }
+
+  #title{
+  }
+
+  #itMic{
+    width: 100%;
   }
 
   #balloon{
@@ -27,8 +42,8 @@
   }
 
   .note{
-    width: 5%;
-    min-width: 120px;
+    width: 1%;
+    min-width: 90px;
     right: 15%;
   }
 
