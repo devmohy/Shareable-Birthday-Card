@@ -23,19 +23,36 @@
   }
 
   #music{
-    width: 7%;
     right: 18%;
+    top: 35%;
+    right: 25%;
+    width: 30vw;
   }
 
   #art{
+
   }
+
+  #dowload{
+  font-size: 1vw;
+}
 
   #title{
+  font-size: 1em;
   }
 
-  #itMic{
-    width: 100%;
+  .fas{
+    font-size: 3vw;
   }
+
+  .fas:hover{
+    color: darkblue;
+    cursor: pointer;
+    font-size: 3vw;
+  }
+/*   #itMic{
+    width: 100%;
+  } */
 
   #balloon{
     height: 40%;
@@ -45,6 +62,7 @@
     width: 1%;
     min-width: 90px;
     right: 15%;
+    cursor: pointer;
   }
 
   footer{

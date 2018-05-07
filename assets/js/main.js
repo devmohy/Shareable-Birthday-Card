@@ -44,14 +44,20 @@ window.onload = function(){
 
         var random = Math.floor( Math.random() * 100 );
         // console.log(random);
-        var mucic =  json.results[random].previewUrl,
+        var music =  json.results[random].previewUrl,
             title =  json.results[random].trackName,
             art = json.results[random].artworkUrl100,
             src = json.results[random].artistName;
         $('#art').attr("src", art);
         $('#title').html(title);
-        $('#itMic').attr("src", mucic);
+        // $('#itMic').attr("src", music);
         $('#music').show();
+        var audio;
+        var audio = new Audio(music);
+        audio.play();
+        $('.note').addClass( "spin" );
+
+
         // console.log(mucic);
         // console.log(art);
         // console.log(src);
