@@ -13,7 +13,6 @@
   .flag{
     width: 30%;
   }
-
   #date{
     font-size: 3em;
   }
@@ -24,7 +23,7 @@
 
   #music{
     right: 18%;
-    top: 35%;
+    top: 42%;
     right: 25%;
     width: 30vw;
   }
@@ -35,7 +34,11 @@
 
   #dowload{
   font-size: 1vw;
-}
+  }
+
+  #dowload a{
+  font-size: 1.3vw;
+  }
 
   #title{
   font-size: 1em;
@@ -45,11 +48,10 @@
     font-size: 3vw;
   }
 
-  .fas:hover{
-    color: darkblue;
-    cursor: pointer;
-    font-size: 3vw;
+  .fa-play{
+    display: none;
   }
+
 /*   #itMic{
     width: 100%;
   } */
@@ -63,6 +65,20 @@
     min-width: 90px;
     right: 15%;
     cursor: pointer;
+  }
+
+  #socialBtn{
+    transform: scale(1.5);
+  }
+
+  .text_1{
+    top: 35%;
+    left: 25%;
+  }
+
+  .text_2{
+    top: 32%;
+    right: 23%;
   }
 
   footer{

@@ -1,3 +1,49 @@
+function audioAjax(){
+  var msg="birthday song"; //検索ワード
+  var params = {
+  "term": msg,
+  "limit": 100, //データ数の上限
+  "entry": "music",
+  "media": "music",
+  "country":"US",
+  "primaryGenreName": "Pop",
+  };
+
+  $.ajax({
+    "url":"https://itunes.apple.com/search",
+    "method": "GET",
+    "data": params,
+    "dataType": "jsonp",
+
+    success: function(json){
+      console.log(json);
+      var random = Math.floor( Math.random() * 100 );
+      var music =  json.results[random].previewUrl,
+          title =  json.results[random].trackName,
+          art = json.results[random].artworkUrl100,
+          src = json.results[random].artistName,
+          iTunesUrl = json.results[random].collectionViewUrl;
+          console.log(iTunesUrl);
+      $('#art').attr("src", art);
+      $('#title').html(title);
+      $('#music').show();
+      $('#dowload a').attr("href", iTunesUrl + ' target="new"');
+
+      if(audio != null){
+        audio.pause();
+       }
+        audio = new Audio(music);
+        audio.loop = true;
+        audio.play();
+
+    },error: function () {
+      alert("Loading failed, Please try again");
+    }
+  });
+}
+
+var audio = null;
+console.log(audio);
 //Date
 window.onload = function(){
   var today = new Date();
@@ -17,65 +63,20 @@ window.onload = function(){
     },1000);
   });
 
-    $(".note").click(function(){
-
-      var msg="birthday song"; //検索ワード
-      var params = {
-      "term": msg,
-      "limit": 100, //データ数の上限
-      "entry": "music",
-      "media": "music",
-      "country":"US",
-      "primaryGenreName": "Pop",
-      };
-
-      $.ajax({
-        "url": "https://itunes.apple.com/search",
-        "method": "GET",
-        "data": params,
-        "dataType": "jsonp",
-
-      success: function(json){
-        console.log(json);
-        // var srcUrl = new Array(json.results.length);
-        // srcTitle = new Array(json.results.length);
-        // srcArt = new Array(json.results.length);
-        // srcArtist = new Array(json.results.length);
-
-        var random = Math.floor( Math.random() * 100 );
-        // console.log(random);
-        var music =  json.results[random].previewUrl,
-            title =  json.results[random].trackName,
-            art = json.results[random].artworkUrl100,
-            src = json.results[random].artistName;
-        $('#art').attr("src", art);
-        $('#title').html(title);
-        // $('#itMic').attr("src", music);
-        $('#music').show();
-        var audio;
-        var audio = new Audio(music);
-        audio.play();
-        $('.note').addClass( "spin" );
-
-
-        // console.log(mucic);
-        // console.log(art);
-        // console.log(src);
-        // for (var i=0;i<json.results.length;i++) {
-        //   // srcUrl[i] = json.results[i].previewUrl; //preview
-        //   // srcTitle[i] = json.results[i].trackName; //SNG name
-        //   // srcArt[i] = json.results[i].artworkUrl100; //img
-        //   // srcArtist[i] = json.results[i].artistName; //AT name
-        //   // console.log(srcUrl[i]);
-        // }
-
-      }
-
-      // error: function() {
-      //   console.log("itunes api search error.", arguments);
-      // },
+  $(".note").click(function(){
+    audioAjax();
+    $(this).addClass('spin');
+    $('.fa-step-backward').click(function() {
+      audio.pause();
     });
-
+    $('.fa-times').click(function() {
+      audio.pause();
+      $('#music').hide();
+      $(".note").removeClass('spin');
+    });
+    $('.fa-play').click(function() {
+      audio.play();
+    });
   });
 
 }
