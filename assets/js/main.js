@@ -33,6 +33,7 @@ function audioAjax(){
         audio.pause();
        }
         audio.src = music;
+        audio.load();
         audio.play();
 
     },error: function () {
