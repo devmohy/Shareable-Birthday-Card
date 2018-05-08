@@ -35,6 +35,7 @@
 }
 
 
+
 .spin{
   animation: spin 1.5s linear infinite;
 }
@@ -247,6 +248,7 @@ body{
   right: 10%;
   transform: scale(1.3);
 }
+
 iframe{
   vertical-align: baseline;
   height: 20px;

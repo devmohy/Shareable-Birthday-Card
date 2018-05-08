@@ -32,8 +32,7 @@ function audioAjax(){
       if(audio != null){
         audio.pause();
        }
-        audio = new Audio(music);
-        audio.loop = true;
+        audio.src = music;
         audio.play();
 
     },error: function () {
@@ -42,7 +41,7 @@ function audioAjax(){
   });
 }
 
-var audio = null;
+var audio = document.getElementById("player");
 console.log(audio);
 //Date
 window.onload = function(){
@@ -56,12 +55,12 @@ window.onload = function(){
   $("#balloon").click(function(){
     $(this).animate({top: '-50%'}, {duration: 2000});
   });
-  $("#btn").click(function(){
-    $(this).fadeOut(1000);
-    setTimeout(function(){
-        $("#btn").parent("#cover").hide();
-    },1000);
-  });
+  // $("#btn").click(function(){
+  //   $(this).fadeOut(1000);
+  //   setTimeout(function(){
+  //       $("#btn").parent("#cover").hide();
+  //   },1000);
+  // });
 
   $(".note").click(function(){
     audioAjax();
