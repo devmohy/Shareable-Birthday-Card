@@ -1,4 +1,4 @@
-function audioAjax(){
+function audioAjax(callback){
   var msg="birthday song"; //検索ワード
   var params = {
   "term": msg,
@@ -33,6 +33,7 @@ function audioAjax(){
        }
         maudio.src = music;
         maudio.load();
+        callback();
         
 
     },error: function () {
@@ -45,6 +46,7 @@ var maudio = document.getElementById("player");
 console.log(maudio);
 
 audioAjax();
+var firstload = true;
 //Date
 window.onload = function(){
   var today = new Date();
@@ -66,8 +68,17 @@ window.onload = function(){
 
   $(".note").click(function(){
     //audioAjax();
-    maudio.play();
-    $('#music').show();
+    if(!firstload){
+      audioAjax(function(){
+        maudio.play();
+        $('#music').show();
+      });
+    } else {
+      firstload = false;
+      maudio.play();
+      $('#music').show();
+    }
+    
     $(this).addClass('spin');
     $('.fa-step-backward').click(function() {
       maudio.pause();
