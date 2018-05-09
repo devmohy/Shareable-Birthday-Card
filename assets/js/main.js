@@ -35,6 +35,7 @@ function audioAjax(){
         audio.src = music;
         audio.load();
         audio.oncanplay = function(){
+          alert("new");
           audio.play(); 
           audio.play();
         }
