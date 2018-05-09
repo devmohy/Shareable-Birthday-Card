@@ -26,7 +26,6 @@ function audioAjax(){
           console.log(iTunesUrl);
       $('#art').attr("src", art);
       $('#title').html(title);
-      $('#music').show();
       $('#dowload a').attr("href", iTunesUrl + ' target="new"');
 
       if(maudio != null){
@@ -68,6 +67,7 @@ window.onload = function(){
   $(".note").click(function(){
     //audioAjax();
     maudio.play();
+    $('#music').show();
     $(this).addClass('spin');
     $('.fa-step-backward').click(function() {
       maudio.pause();
