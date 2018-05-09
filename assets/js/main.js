@@ -33,7 +33,7 @@ function audioAjax(callback){
        }
         maudio.src = music;
         maudio.load();
-        callback();
+        if(callback){callback();}
         
 
     },error: function () {
