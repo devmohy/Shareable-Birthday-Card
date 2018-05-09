@@ -30,15 +30,13 @@ function audioAjax(){
       $('#dowload a').attr("href", iTunesUrl + ' target="new"');
 
       if(maudio != null){
-        //audio.pause();
+        audio.pause();
        }
         maudio.src = music;
         maudio.load();
-        maudio.oncanplay = function(){
-          alert("new");
-          maudio.play(); 
+        setTimeout(()=>{
           maudio.play();
-        }
+        },3000);
         
 
     },error: function () {
