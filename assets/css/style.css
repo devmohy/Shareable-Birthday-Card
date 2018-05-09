@@ -34,7 +34,18 @@
     100% { opacity: 0.2; }
 }
 
+@keyframes shake {
+    0% {transform: translate(0px, 0px) rotateZ(0deg)}
+    25% {transform: translate(2px, 2px) rotateZ(1deg)}
+    50% {transform: translate(0px, 2px) rotateZ(0deg)}
+    75% {transform: translate(2px, 0px) rotateZ(-1deg)}
+    100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}
 
+a:link { color:black; text-decoration:none }
+a:visited { color:black; text-decoration:none }
+a:hover { color:red; text-decoration:none }
+a:active { color:black; text-decoration:none }
 
 .spin{
   animation: spin 1.5s linear infinite;
@@ -95,11 +106,14 @@ body{
 } */
 
 .fas{
-  font-size: 2em;
+  font-size: 3.5em;
   margin: 10%;
   transition: all .5s;
+  cursor: pointer;
 }
-
+.fas:hover{
+  color: red;
+}
 #dowload{
   font-size: 3vw;
   padding: .3em;
@@ -155,12 +169,18 @@ body{
   cursor: pointer;
   animation: horizontal 1s ease-in-out infinite alternate;
 }
-
+#balloon:hover{
+  animation: shake .1s  infinite;
+}
 .note{
   position: absolute;
   width: 15%;
   top: 30%;
   right: 10%;
+}
+
+.note:hover{
+  animation: shake .1s  infinite;
 }
 
 .note:active{
@@ -245,8 +265,8 @@ body{
   padding: 0;
   position: absolute;
   bottom: 5%;
-  right: 10%;
-  transform: scale(1.3);
+  right: 15%;
+  transform: scale(2);
 }
 
 iframe{

@@ -58,6 +58,7 @@ window.onload = function(){
 // balloon
   $("#balloon").click(function(){
     $(this).animate({top: '-50%'}, {duration: 2000});
+    $('.text_1').hide();
   });
   // $("#btn").click(function(){
   //   $(this).fadeOut(1000);
@@ -72,11 +73,13 @@ window.onload = function(){
       audioAjax(function(){
         maudio.play();
         $('#music').show();
+        maudio.loop = true;
       });
     } else {
       firstload = false;
       maudio.play();
       $('#music').show();
+      maudio.loop = true;
     }
     
     $(this).addClass('spin');

@@ -61,13 +61,14 @@
   }
 
   .note{
-    width: 1%;
+    width: 3vw;
     min-width: 90px;
     right: 15%;
     cursor: pointer;
   }
 
   #socialBtn{
+    -webkit-transform: scale(1.5);
     transform: scale(1.5);
   }
 
