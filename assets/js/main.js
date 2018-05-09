@@ -29,15 +29,15 @@ function audioAjax(){
       $('#music').show();
       $('#dowload a').attr("href", iTunesUrl + ' target="new"');
 
-      if(audio != null){
+      if(maudio != null){
         //audio.pause();
        }
-        audio.src = music;
-        audio.load();
-        audio.oncanplay = function(){
+        maudio.src = music;
+        maudio.load();
+        maudio.oncanplay = function(){
           alert("new");
-          audio.play(); 
-          audio.play();
+          maudio.play(); 
+          maudio.play();
         }
         
 
@@ -47,8 +47,8 @@ function audioAjax(){
   });
 }
 
-var audio = document.getElementById("player");
-console.log(audio);
+var maudio = document.getElementById("player");
+console.log(maudio);
 //Date
 window.onload = function(){
   var today = new Date();
@@ -72,7 +72,7 @@ window.onload = function(){
     audioAjax();
     $(this).addClass('spin');
     $('.fa-step-backward').click(function() {
-      //audio.pause();
+      //maudio.pause();
     });
     $('.fa-times').click(function() {
       //audio.pause();
@@ -80,7 +80,7 @@ window.onload = function(){
       $(".note").removeClass('spin');
     });
     $('.fa-play').click(function() {
-      audio.play();
+      maudio.play();
     });
   });
 
