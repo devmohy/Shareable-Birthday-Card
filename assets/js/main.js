@@ -34,9 +34,9 @@ function audioAjax(){
        }
         maudio.src = music;
         maudio.load();
-        setTimeout(()=>{
+        maudio.oncanplaythrough = ()=>{
           maudio.play();
-        },3000);
+        };
         
 
     },error: function () {
