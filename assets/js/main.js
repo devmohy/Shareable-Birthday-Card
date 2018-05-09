@@ -34,7 +34,10 @@ function audioAjax(){
        }
         audio.src = music;
         audio.load();
-        audio.play();
+        audio.oncanplay = function(){
+          audio.play(); 
+        }
+        
 
     },error: function () {
       alert("Loading failed, Please try again");
