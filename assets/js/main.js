@@ -30,7 +30,7 @@ function audioAjax(){
       $('#dowload a').attr("href", iTunesUrl + ' target="new"');
 
       if(maudio != null){
-        audio.pause();
+        maudio.pause();
        }
         maudio.src = music;
         maudio.load();
@@ -70,10 +70,10 @@ window.onload = function(){
     audioAjax();
     $(this).addClass('spin');
     $('.fa-step-backward').click(function() {
-      //maudio.pause();
+      maudio.pause();
     });
     $('.fa-times').click(function() {
-      //audio.pause();
+      maudio.pause();
       $('#music').hide();
       $(".note").removeClass('spin');
     });
