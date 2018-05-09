@@ -34,9 +34,6 @@ function audioAjax(){
        }
         maudio.src = music;
         maudio.load();
-        maudio.oncanplaythrough = ()=>{
-          maudio.play();
-        };
         
 
     },error: function () {
@@ -47,6 +44,8 @@ function audioAjax(){
 
 var maudio = document.getElementById("player");
 console.log(maudio);
+
+audioAjax();
 //Date
 window.onload = function(){
   var today = new Date();
@@ -67,7 +66,8 @@ window.onload = function(){
   // });
 
   $(".note").click(function(){
-    audioAjax();
+    //audioAjax();
+    maudio.play();
     $(this).addClass('spin');
     $('.fa-step-backward').click(function() {
       maudio.pause();
