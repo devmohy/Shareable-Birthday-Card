@@ -41,34 +41,56 @@ function audioAjax(callback){
     }
   });
 }
+// ここから
+
+// ドリンク
+var mouse;
+var clickOffsetTop;
+var clickOffsetLeft;
+var drink1 = document.querySelector('#drink1');
+  drink1.onmousedown = function(evt){
+    $('.text_3').hide();
+      mouse = 'down';
+      evt = (evt) || window.event;
+      clickOffsetTop = evt.clientY - drink1.offsetTop;
+      clickOffsetLeft = evt.clientX - drink1.offsetLeft;
+  };
+      
+  document.onmouseup = function(){
+      mouse = 'up';
+  };
+  
+  document.onmousemove = function(evt){
+      evt = (evt) || window.event;
+      if(mouse == 'down'){
+          drink1.style.top = evt.clientY - clickOffsetTop + 'px';
+          drink1.style.left = evt.clientX - clickOffsetLeft + 'px';
+      }
+  };
+
+// ドリンク終わり
+
 
 var maudio = document.getElementById("player");
-console.log(maudio);
-
 audioAjax();
 var firstload = true;
-//Date
+
+
 window.onload = function(){
+  //Date
   var today = new Date();
   var year = today.getFullYear();
   var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October ", "November",  "December"][today.getMonth()];
   var day = today.getDate();
   document.getElementById('date').innerHTML = year + '/' + month + '/' + day + "th";
 
-// balloon
   $("#balloon").click(function(){
     $(this).animate({top: '-50%'}, {duration: 2000});
     $('.text_1').hide();
   });
-  // $("#btn").click(function(){
-  //   $(this).fadeOut(1000);
-  //   setTimeout(function(){
-  //       $("#btn").parent("#cover").hide();
-  //   },1000);
-  // });
 
+// music
   $(".note").click(function(){
-    //audioAjax();
     if(!firstload){
       audioAjax(function(){
         maudio.play();
