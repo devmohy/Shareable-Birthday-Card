@@ -271,6 +271,12 @@ body{
   animation: flash 1s infinite;
 }
 
+.text_3{
+  top: 80%;
+  right: 23%;
+  display: none;
+}
+
 #socialBtn{
   text-align: right;
   padding: 0;
