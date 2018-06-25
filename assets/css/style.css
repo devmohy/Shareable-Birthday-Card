@@ -313,3 +313,8 @@ footer{
   float: left;
   transform: scale(-1, 1);
 }
+@media screen and (max-width: 480px) {
+  .text text_3{
+    display: none;
+  }
+}
